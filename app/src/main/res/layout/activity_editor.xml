@@ -75,7 +75,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/edit_product_price"
             android:hint="@string/hint_product_price"
-            android:layout_weight="0.7"/>
+            android:layout_weight="0.7"
+            android:inputType="number"/>
 
     </LinearLayout>
 
@@ -170,6 +171,7 @@
             android:gravity="center"
             android:layout_height="wrap_content"
             android:id="@+id/edit_supplier_contact"
+            android:inputType="number"
             android:hint="@string/hint_enter_contactDetails"
             android:layout_weight="0.7"/>
     </LinearLayout>

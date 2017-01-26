@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -335,6 +336,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         }
     }
 
+
     /**
      * Get user input from editor and save product into database.
      */
@@ -363,7 +365,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         //Check if all the product details are filled, else
         //prompt the user to fill them
         if ((TextUtils.isEmpty(nameString)) || (TextUtils.isEmpty(priceString)) ||
-                (TextUtils.isEmpty(quantityString))) {
+                (TextUtils.isEmpty(quantityString)) || mUri == null) {
             Toast.makeText(this, getString(R.string.prompt_fill_details), Toast.LENGTH_SHORT).show();
             flag = 0;
             return;
